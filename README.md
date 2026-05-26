@@ -2,6 +2,8 @@
 
 Starter repo for Assignment 4. Fork this to get started.
 
+See the assignment guide here for a more-detailed step-by-step: https://michaelpalumbo.github.io/visa2p61/#a4-overview
+
 ## Structure
 
 ```
