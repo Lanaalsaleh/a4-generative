@@ -27,6 +27,7 @@ function draw() {
   horizonal(0, width, 0, height);
   vertical(0, width, 0, height);
   rightDiagonal(0, width, 0, height);
+  leftDiagonal(0, width, 0, height);
 
   for (var i = 0; i < pix.length; i++) {
     pix[i].update();
@@ -128,6 +129,17 @@ function rightDiagonal(x1, x2, y1, y2) {
     if ((x2 - x1 > y2 - y1) && (i <= w - (y2 - y1))) {
       line(x1 + i, y1, x1 + i + y2 - y1, y2);
     }
+  }
+}
+function leftDiagonal(x1, x2, y1, y2) {
+
+  stroke(255, 100, 150, 120);
+  strokeWeight(2);
+
+  var increment = 20;
+
+  for (var i = -height; i < width; i += increment) {
+    line(i, y1, i + height, y2);
   }
 }
 
