@@ -60,9 +60,11 @@ function Pixel(x, y, speed, curve) {
   }
 
   this.display = function() {
-    stroke(255);
-    point(this.x, this.y + 5);
-    point(width - this.x, this.y + 5);
+    // im trying to chnage the color of the points
+    stroke(random(255), 100, 255);
+    // here i made the shape bigger it turned into big circles 
+    ellipse(this.x, this.y + 5, 4, 4);
+    point(width - this.x, this.y + 5, 4, 4);
   }
 
 }
