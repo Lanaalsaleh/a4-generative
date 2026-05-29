@@ -67,7 +67,7 @@ function Pixel(x, y, speed, curve) {
   this.display = function () {
     // im trying to change the color of the points
     // now i made the points different colors some pink and some blue
-    // chnaged the pink to more of a vibrant pink to become more visable 
+    // chnaged the pink to more of a vibrant pink to become more visiable 
     if (this.x < width / 3) {
       fill(255, 20, 147);
     } else if (this.x < 2 * width / 3) {
@@ -96,7 +96,7 @@ function horizonal(x1, x2, y1, y2) {
   // nvm i wanted to make the canvas change color as i move the mouse but i feel like its complicating things for me right now so ill just do it later maybe
   // stroke(mouseX / 3, 150, 255, 65);  this didnt work because the lines are kind of hard to see 
   stroke(0, 150, 255, 110);
-  // i also made it a bit transparent to help make it less visable 
+  // i also made it a bit transparent to help make it less visiable 
   strokeWeight(1);// making blue lines thicker
   // making the line thinner because im trying to make it not overpower the dots
   // added mouse interaction to the line pattern
@@ -140,7 +140,7 @@ function rightDiagonal(x1, x2, y1, y2) {
 }
 // im adding more lines to make it look full and complete 
 function leftDiagonal(x1, x2, y1, y2) {
-
+// they werent showing much so i made it more visiable 
   stroke(255, 100, 150, 180);
   strokeWeight(2);
 
