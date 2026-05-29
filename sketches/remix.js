@@ -35,10 +35,10 @@ function draw() {
   // fill(255,255,0);
   // ellipse(mouseX, mouseY, 50, 50); 
   // added a border to match the geometric style from sketch 2 
-  stroke(255, 105, 180);
-  strokeWeight(4);
+  stroke(255, 50, 50);
+  strokeWeight(10);
   noFill();
-  rect(0, 0, width - 1, height - 1);
+  rect(5, 5, width - 10, height - 10);
 }
 function Pixel(x, y, speed, curve) {
 
