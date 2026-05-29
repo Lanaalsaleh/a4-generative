@@ -30,7 +30,9 @@ function setup() {
 
   createCanvas(768, 768); 
   noFill(); 
-  background(255); 
+  // chnaged background color
+  // the color barely changed so im gonna try to make it more pigmented 
+  background(255, 230, 245); 
      
   var x1 = 0; 
   var x2 = width/4; 
