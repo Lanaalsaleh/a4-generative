@@ -16,9 +16,54 @@ for (var i = 0; i < width / 10; i++) {
     }
   }
 }
+// this is the part where it draws the particles each frame
+
 
 function draw() {
-  background(220);
- 
+  background(0);
+
+  for (var i = 0; i < pix.length; i++) {
+    pix[i].update();
+    pix[i].display();
+  }
 }
+ function Pixel(x, y, speed, curve) {
+
+  this.x = x;
+  this.y = y;
+  this.speed = speed;
+  this.curve = curve;
+
+  this.update = function() {
+    // added mouse interaction here by making the mouse change movement speed
+    // changed speed just so it can be more noticeable 
+    // now when moving the mouse left the points fall slowly and when right they fall fast
+    this.y += this.speed + mouseX * 0.005;
+    if (this.y > height) {
+      this.y = 0;
+    }
+  }
+
+  this.display = function() {
+    // im trying to change the color of the points
+    // now i made the points different colors some pink and some blue
+    // chnaged the pink to more of a vibrant pink to become more visable 
+    if (this.x < width / 2) { 
+      fill(255, 20, 147); 
+    } else {
+      fill(100,200,255);
+    }
+
+    noStroke();
+
+    // here i made the shape bigger it turned into big circles 
+    // i changed the circles to smaller circles something in between so not too small
+    //  chnaged the size to something that looks different so they are not all the same size
+    ellipse(this.x, this.y + 5, 2, 2);
+    ellipse(width - this.x, this.y + 5, 4, 4);
+  }
+
+}
+
+
 
