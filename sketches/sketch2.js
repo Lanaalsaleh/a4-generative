@@ -32,7 +32,7 @@ function setup() {
   noFill(); 
   // chnaged background color
   // the color barely changed so im gonna try to make it more pigmented 
-  background(255, 230, 245); 
+  background(200, 220, 255); 
 
  
      
