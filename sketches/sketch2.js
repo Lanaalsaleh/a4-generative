@@ -33,7 +33,8 @@ function setup() {
   // chnaged background color
   // the color barely changed so im gonna try to make it more pigmented 
   background(255, 230, 245); 
-  
+
+ 
      
   var x1 = 0; 
   var x2 = width/4; 
@@ -139,9 +140,9 @@ function horizonal(x1, x2, y1, y2) {
 
   var increment = 4; 
   for (i = y1; i <= y2; i += increment) { 
-    line(x1, i, x2, i); 
+    line(x1, i, x2, i);
   } 
-} 
+}  
 
 function vertical(x1, x2, y1, y2) { 
   // changing color to pink im just trying to make the colors on theme
@@ -192,8 +193,8 @@ function leftDiagonal(x1, x2, y1, y2) {
 function rightDiagonal(x1, x2, y1, y2) { 
   // This code is not general and only works for 
   // square and horizontal display areas 
- 
-  var increment = 6; 
+//  making the lines more spread out 
+  var increment = 10; 
   stroke(255, 0, 0); 
   var w = x2 - x1; 
     
