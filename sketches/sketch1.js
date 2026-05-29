@@ -67,9 +67,10 @@ function Pixel(x, y, speed, curve) {
 
   this.display = function() {
     // im trying to change the color of the points
-    // now i made the points different colors some pink and some blue 
+    // now i made the points different colors some pink and some blue
+    // chnaged the pink to more of a vibrant pink to become more visable 
     if (this.x < width / 2) { 
-      fill(255, 105, 180); 
+      fill(255, 20, 147); 
     } else {
       fill(100,200,255);
     }
