@@ -55,6 +55,7 @@ function Pixel(x, y, speed, curve) {
   this.update = function() {
     // added mouse interaction here by making the mouse change movement speed
     // changed speed just so it can be more noticeable 
+    // now when moving the mouse left the points fall slowly and when right they fall fast
     this.y += this.speed + mouseX * 0.005;
     if (this.y > height) {
       this.y = 0;
