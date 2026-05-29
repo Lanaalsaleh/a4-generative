@@ -28,7 +28,8 @@ var pix = [];
 
 function setup() {
   createCanvas(800, 600);
-  frameRate(30);
+  // changed the frame rate to 60 to make the circles move faster 
+  frameRate(60);
 
   for (var i = 0; i < width / 10; i++) {
     for (var j = 0; j < height / 20; j++) {
