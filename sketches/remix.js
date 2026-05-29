@@ -131,6 +131,7 @@ function rightDiagonal(x1, x2, y1, y2) {
     }
   }
 }
+// im adding more lines to make it look full and complete 
 function leftDiagonal(x1, x2, y1, y2) {
 
   stroke(255, 100, 150, 120);
