@@ -3,17 +3,17 @@
 // This is where sketch1 and sketch2 come together
 // into something new
 // =============================================
- // your combined code here
+// your combined code here
 var pix = [];
 function setup() {
   // i copied the particle system from sketch 1 
   // wanted to start building the remix with the moving dots
   // chnaged canvas size so more can be seen 
   createCanvas(1000, 800);
-for (var i = 0; i < width / 10; i++) {
+  for (var i = 0; i < width / 10; i++) {
     for (var j = 0; j < height / 20; j++) {
-      pix[i * (height / 20) + j] = 
-      new Pixel(i * 10, j * 10, i / 100.0 * j / 100 * 8.0, true);
+      pix[i * (height / 20) + j] =
+        new Pixel(i * 10, j * 10, i / 100.0 * j / 100 * 8.0, true);
     }
   }
 }
@@ -22,27 +22,32 @@ for (var i = 0; i < width / 10; i++) {
 // chnaged background color to black because they dots werent appearing 
 function draw() {
   background(0);
- 
+
   // adding horizontal lines from sketch 2 
-   horizonal(0, width, 0, height);
-   vertical(0, width, 0, height);
-   rightDiagonal(0, width, 0, height);
+  horizonal(0, width, 0, height);
+  vertical(0, width, 0, height);
+  rightDiagonal(0, width, 0, height);
 
   for (var i = 0; i < pix.length; i++) {
     pix[i].update();
     pix[i].display();
   } // im just testing to see if the dot will appear and chnage size with the mouse because the blue and pink ones are not working
   // fill(255,255,0);
-// ellipse(mouseX, mouseY, 50, 50);
+  // ellipse(mouseX, mouseY, 50, 50); 
+  // added a border to match the geometric style from sketch 2 
+  stroke(255, 105, 180);
+  strokeWeight(4);
+  noFill();
+  rect(0, 0, width - 1, height - 1);
 }
- function Pixel(x, y, speed, curve) {
+function Pixel(x, y, speed, curve) {
 
   this.x = x;
   this.y = y;
   this.speed = speed;
   this.curve = curve;
 
-  this.update = function() {
+  this.update = function () {
     // added mouse interaction here by making the mouse change movement speed
     // changed speed just so it can be more noticeable 
     // now when moving the mouse left the points fall slowly and when right they fall fast
@@ -51,23 +56,24 @@ function draw() {
       this.y = 0;
     }
   }
+ 
 
-  this.display = function() {
+  this.display = function () {
     // im trying to change the color of the points
     // now i made the points different colors some pink and some blue
     // chnaged the pink to more of a vibrant pink to become more visable 
-    if (this.x < width / 2) { 
-      fill(255, 20, 147); 
+    if (this.x < width / 2) {
+      fill(255, 20, 147);
     } else {
-      fill(100,200,255);
+      fill(100, 200, 255);
     }
 
     noStroke();
 
     // if mouse goes up particles become smaller and if down they become large 
-     let s = map(mouseY, 0, height, 2, 10);
+    let s = map(mouseY, 0, height, 2, 10);
 
-     
+
     // here i made the shape bigger it turned into big circles 
     // i changed the circles to smaller circles something in between so not too small
     //  chnaged the size to something that looks different so they are not all the same size
@@ -76,7 +82,7 @@ function draw() {
   }
 
 }
-function horizonal(x1, x2, y1, y2) { 
+function horizonal(x1, x2, y1, y2) {
   // changed color from black to blue
   // gonna make it respond to the mouse interaction
   // nvm i wanted to make the canvas change color as i move the mouse but i feel like its complicating things for me right now so ill just do it later maybe
@@ -85,13 +91,13 @@ function horizonal(x1, x2, y1, y2) {
   // i also made it a bit transparent to help make it less visable 
   strokeWeight(1);// making blue lines thicker
   // making the line thinner because im trying to make it not overpower the dots
-// added mouse interaction to the line pattern
+  // added mouse interaction to the line pattern
   // var increment = mouseX / 5 + 2; 
-  var increment = 4; 
-  for (i = y1; i <= y2; i += increment) { 
+  var increment = 4;
+  for (i = y1; i <= y2; i += increment) {
     line(x1, i, x2, i);
-  } 
-} 
+  }
+}
 function vertical(x1, x2, y1, y2) {
   stroke(255, 105, 180, 70);
   var increment = 3;
