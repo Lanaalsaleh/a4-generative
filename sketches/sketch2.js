@@ -31,12 +31,13 @@ function setup() {
 // made canvas bigger 
   createCanvas(900, 900); 
   noFill(); 
-  // chnaged background color
+  // changed background color
   // the color barely changed so im gonna try to make it more pigmented 
   background(200, 220, 255); 
   // added a border for the canvas almost everything im doing is just to experiment and chnage the way it looks and moslty to my prefrence 
-  stroke(0); 
-  strokeWeight(5);
+  // made border show more 
+  stroke(255, 20, 147); 
+  strokeWeight(10);
   noFill();
   rect(0, 0, width, height);
 
