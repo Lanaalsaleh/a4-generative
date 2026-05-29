@@ -18,7 +18,7 @@ for (var i = 0; i < width / 10; i++) {
 }
 // this is the part where it draws the particles each frame
 
-
+// chnaged background color to black because they dots werent appearing 
 function draw() {
   background(0);
 
