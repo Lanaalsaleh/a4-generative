@@ -87,7 +87,7 @@ function horizonal(x1, x2, y1, y2) {
   // gonna make it respond to the mouse interaction
   // nvm i wanted to make the canvas change color as i move the mouse but i feel like its complicating things for me right now so ill just do it later maybe
   // stroke(mouseX / 3, 150, 255, 65);  this didnt work because the lines are kind of hard to see 
-  stroke(0, 150, 255, 65);
+  stroke(0, 150, 255, 110);
   // i also made it a bit transparent to help make it less visable 
   strokeWeight(1);// making blue lines thicker
   // making the line thinner because im trying to make it not overpower the dots
