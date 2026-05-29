@@ -23,6 +23,7 @@ function draw() {
   background(0);
   // adding horizontal lines from sketch 2 
   horizonal(0, width, 0, height);
+  vertical(0, width, 0, height);
 
   for (var i = 0; i < pix.length; i++) {
     pix[i].update();
@@ -80,5 +81,13 @@ function horizonal(x1, x2, y1, y2) {
     line(x1, i, x2, i);
   } 
 } 
+function vertical(x1, x2, y1, y2) {
+  stroke(255, 105, 180);
+  var increment = 3;
+
+  for (i = x1; i <= x2; i += increment) {
+    line(i, y1, i, y2);
+  }
+}
 
 
