@@ -80,8 +80,9 @@ function Pixel(x, y, speed, curve) {
 
     // here i made the shape bigger it turned into big circles 
     // i changed the circles to smaller circles something in between so not too small
+    //  chnaged the size to something that looks different so they are not all the same size
     ellipse(this.x, this.y + 5, 2, 2);
-    ellipse(width - this.x, this.y + 5, 3, 3);
+    ellipse(width - this.x, this.y + 5, 4, 4);
   }
 
 }
