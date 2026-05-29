@@ -8,7 +8,8 @@ var pix = [];
 function setup() {
   // i copied the particle system from sketch 1 
   // wanted to start building the remix with the moving dots
-  createCanvas(800, 500);
+  // chnaged canvas size so more can be seen 
+  createCanvas(1000, 800);
 for (var i = 0; i < width / 10; i++) {
     for (var j = 0; j < height / 20; j++) {
       pix[i * (height / 20) + j] = 
