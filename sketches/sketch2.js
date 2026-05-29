@@ -24,7 +24,8 @@
   
   Colors adjusted for RGB (additive color model) 
   
-*/ 
+*/
+//  i feel like this one was kinda harder to hack/change maybe because it was just lines it just felt more difficult than sketch 1 
 
 function setup() {
 // made canvas bigger 
@@ -33,6 +34,7 @@ function setup() {
   // chnaged background color
   // the color barely changed so im gonna try to make it more pigmented 
   background(200, 220, 255); 
+  // added a border for the canvas almost everything im doing is just to experiment and chnage the way it looks and moslty to my prefrence 
   stroke(0); 
   strokeWeight(5);
   noFill();
