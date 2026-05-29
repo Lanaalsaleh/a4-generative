@@ -21,14 +21,17 @@ for (var i = 0; i < width / 10; i++) {
 // chnaged background color to black because they dots werent appearing 
 function draw() {
   background(0);
+ 
   // adding horizontal lines from sketch 2 
-  horizonal(0, width, 0, height);
-  vertical(0, width, 0, height);
+   horizonal(0, width, 0, height);
+   vertical(0, width, 0, height);
 
   for (var i = 0; i < pix.length; i++) {
     pix[i].update();
     pix[i].display();
-  }
+  } // im just testing to see if the dot will appear and chnage size with the mouse because the blue and pink ones are not working
+  // fill(255,255,0);
+// ellipse(mouseX, mouseY, 50, 50);
 }
  function Pixel(x, y, speed, curve) {
 
@@ -59,11 +62,15 @@ function draw() {
 
     noStroke();
 
+    // if mouse goes up particles become smaller and if down they become large 
+     let s = map(mouseY, 0, height, 2, 10);
+
+     
     // here i made the shape bigger it turned into big circles 
     // i changed the circles to smaller circles something in between so not too small
     //  chnaged the size to something that looks different so they are not all the same size
-    ellipse(this.x, this.y + 5, 2, 2);
-    ellipse(width - this.x, this.y + 5, 4, 4);
+    ellipse(this.x, this.y + 5, s, s);
+    ellipse(width - this.x, this.y + 5, s + 2, s + 2);
   }
 
 }
@@ -71,11 +78,13 @@ function horizonal(x1, x2, y1, y2) {
   // changed color from black to blue
   // gonna make it respond to the mouse interaction
   // nvm i wanted to make the canvas change color as i move the mouse but i feel like its complicating things for me right now so ill just do it later maybe
-  stroke(0, 150, 255, 65); 
+  // stroke(mouseX / 3, 150, 255, 65);  this didnt work because the lines are kind of hard to see 
+  stroke(0, 150, 255, 65);
   // i also made it a bit transparent to help make it less visable 
   strokeWeight(1);// making blue lines thicker
   // making the line thinner because im trying to make it not overpower the dots
-
+// added mouse interaction to the line pattern
+  // var increment = mouseX / 5 + 2; 
   var increment = 4; 
   for (i = y1; i <= y2; i += increment) { 
     line(x1, i, x2, i);
