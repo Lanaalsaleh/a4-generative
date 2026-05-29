@@ -197,6 +197,8 @@ function rightDiagonal(x1, x2, y1, y2) {
 //  making the lines more spread out 
   var increment = 10; 
   stroke(255, 0, 0); 
+  strokeWeight(2); 
+  // made line thinner
   var w = x2 - x1; 
     
   for (i = 0; i <= w; i += increment) { 
