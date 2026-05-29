@@ -70,8 +70,10 @@ function horizonal(x1, x2, y1, y2) {
   // changed color from black to blue
   // gonna make it respond to the mouse interaction
   // nvm i wanted to make the canvas change color as i move the mouse but i feel like its complicating things for me right now so ill just do it later maybe
-  stroke(0, 150, 255); 
-  strokeWeight(3);// making blue lines thicker
+  stroke(0, 150, 255, 65); 
+  // i also made it a bit transparent to help make it less visable 
+  strokeWeight(1);// making blue lines thicker
+  // making the line thinner because im trying to make it not overpower the dots
 
   var increment = 4; 
   for (i = y1; i <= y2; i += increment) { 
