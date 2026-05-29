@@ -147,7 +147,8 @@ function horizonal(x1, x2, y1, y2) {
 function vertical(x1, x2, y1, y2) { 
   // changing color to pink im just trying to make the colors on theme
   stroke(255, 105, 180); 
-  var increment = 4; 
+  // made lines denser tried 2 but felt to dense so im gonna change it to 3
+  var increment = 3; 
 
   for (i = x1; i <= x2; i += increment) { 
     line(i, y1, i, y2); 
