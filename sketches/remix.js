@@ -21,6 +21,8 @@ for (var i = 0; i < width / 10; i++) {
 // chnaged background color to black because they dots werent appearing 
 function draw() {
   background(0);
+  // adding horizontal lines from sketch 2 
+  horizonal(0, width, 0, height);
 
   for (var i = 0; i < pix.length; i++) {
     pix[i].update();
@@ -64,6 +66,17 @@ function draw() {
   }
 
 }
+function horizonal(x1, x2, y1, y2) { 
+  // changed color from black to blue
+  // gonna make it respond to the mouse interaction
+  // nvm i wanted to make the canvas change color as i move the mouse but i feel like its complicating things for me right now so ill just do it later maybe
+  stroke(0, 150, 255); 
+  strokeWeight(3);// making blue lines thicker
 
+  var increment = 4; 
+  for (i = y1; i <= y2; i += increment) { 
+    line(x1, i, x2, i);
+  } 
+} 
 
 
