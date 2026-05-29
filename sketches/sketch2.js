@@ -33,6 +33,7 @@ function setup() {
   // chnaged background color
   // the color barely changed so im gonna try to make it more pigmented 
   background(255, 230, 245); 
+  
      
   var x1 = 0; 
   var x2 = width/4; 
@@ -127,9 +128,15 @@ function setup() {
 
 }
 
+
+
 function horizonal(x1, x2, y1, y2) { 
   // changed color from black to blue
+  // gonna make it respond to the mouse interaction
+  // nvm i wanted to make the canvas change color as i move the mouse but i feel like its complicating things for me right now so ill just do it later maybe
   stroke(0, 150, 255); 
+  strokeWeight(3);// making blue lines thicker
+
   var increment = 4; 
   for (i = y1; i <= y2; i += increment) { 
     line(x1, i, x2, i); 
