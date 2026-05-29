@@ -8,6 +8,8 @@ var pix = [];
 //  this is to let left Diagonal lines move 
 let offset = 0;
 function setup() {
+  pix = []; 
+  
   // i copied the particle system from sketch 1 
   // wanted to start building the remix with the moving dots
   // chnaged canvas size so more can be seen 
@@ -149,6 +151,12 @@ function leftDiagonal(x1, x2, y1, y2) {
 
   for (var i = -height; i < width; i += increment) {
     line(i + offset, y1, i + height + offset, y2);
+  }
+}
+function keyPressed() {
+  if (key === 'r' || key === 'R') {
+    offset = 0; 
+    setup(); 
   }
 }
 
