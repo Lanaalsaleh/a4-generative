@@ -1,14 +1,14 @@
 {
   "sketch1": {
-    "title": "source 1 title",
-    "author": "source 1 author",
-    "date": "source 1 date",
-    "source": "source 1 url"
+    "title": "Structure 2",
+    "author": "Casey Reas",
+    "date": "2016",
+    "source": "https://github.com/REAS/SoftwareStructures/blob/master/Code-2016-JS/S2_REAS/sketch.js"
   },
   "sketch2": {
-    "title": "source 2 title",
-    "author": "source 2 author",
-    "date": "source 2 date",
-    "source": "source 2 url"
+    "title": "85. Same as 63, but with four colors",
+    "author": "Casey Reas",
+    "date": "2016",
+    "source": "https://github.com/REAS/SoftwareStructures/blob/master/Code-2016-JS/WD_085_LeWitt_REAS/sketch.js"
   }
 }
