@@ -27,8 +27,8 @@
 */ 
 
 function setup() {
-
-  createCanvas(768, 768); 
+// made canvas bigger 
+  createCanvas(900, 900); 
   noFill(); 
   // chnaged background color
   // the color barely changed so im gonna try to make it more pigmented 
