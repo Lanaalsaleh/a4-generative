@@ -38,7 +38,9 @@ function setup() {
 }
 
 function draw() {
-  background(0);
+  // creating motion trails behind the moving circles
+  // im gonna try making it shorter just because it blends so much and i dont like it 
+  background(0, 50);
   for (var i = height / 10; i < pix.length; i++) {
     pix[i].update();
     pix[i].display();
