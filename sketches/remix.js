@@ -5,6 +5,8 @@
 // =============================================
 // your combined code here
 var pix = [];
+//  this is to let left Diagonal lines move 
+let offset = 0;
 function setup() {
   // i copied the particle system from sketch 1 
   // wanted to start building the remix with the moving dots
@@ -22,6 +24,9 @@ function setup() {
 // chnaged background color to black because they dots werent appearing 
 function draw() {
   background(0);
+
+  offset += 1;
+
 
   // adding horizontal lines from sketch 2 
   horizonal(0, width, 0, height);
@@ -140,7 +145,7 @@ function leftDiagonal(x1, x2, y1, y2) {
   var increment = 20;
 
   for (var i = -height; i < width; i += increment) {
-    line(i, y1, i + height, y2);
+    line(i + offset, y1, i + height + offset , y2);
   }
 }
 
