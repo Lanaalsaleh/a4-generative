@@ -25,6 +25,7 @@ function draw() {
   // adding horizontal lines from sketch 2 
    horizonal(0, width, 0, height);
    vertical(0, width, 0, height);
+   rightDiagonal(0, width, 0, height);
 
   for (var i = 0; i < pix.length; i++) {
     pix[i].update();
@@ -98,5 +99,28 @@ function vertical(x1, x2, y1, y2) {
     line(i, y1, i, y2);
   }
 }
+function rightDiagonal(x1, x2, y1, y2) {
+  var increment = 10;
+  stroke(255, 0, 0, 90);
+  var w = x2 - x1;
 
+  for (i = 0; i <= w; i += increment) {
+
+    if (w - i < y2 - y1) {
+      line(x1 + i, y1, x2, y1 + (w - i));
+    }
+
+    if (y2 - i >= y1) {
+      line(x1, y2 - i, x1 + i, y2);
+    }
+
+    if (y2 - y1 > x2 - x1 && y1 + w + i < y2) {
+      line(x1, y1 + i, x2, y1 + w + i);
+    }
+
+    if ((x2 - x1 > y2 - y1) && (i <= w - (y2 - y1))) {
+      line(x1 + i, y1, x1 + i + y2 - y1, y2);
+    }
+  }
+}
 
