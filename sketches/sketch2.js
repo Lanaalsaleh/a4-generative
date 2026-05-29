@@ -126,7 +126,8 @@ function setup() {
 }
 
 function horizonal(x1, x2, y1, y2) { 
-  stroke(0); 
+  // changed color from black to blue
+  stroke(0, 150, 255); 
   var increment = 4; 
   for (i = y1; i <= y2; i += increment) { 
     line(x1, i, x2, i); 
@@ -134,9 +135,10 @@ function horizonal(x1, x2, y1, y2) {
 } 
 
 function vertical(x1, x2, y1, y2) { 
-  stroke(255, 0, 0); 
+  // changing color to pink im just trying to make the colors on theme
+  stroke(255, 105, 180); 
   var increment = 4; 
-  stroke(0, 255, 0); 
+
   for (i = x1; i <= x2; i += increment) { 
     line(i, y1, i, y2); 
   } 
@@ -147,7 +149,8 @@ function leftDiagonal(x1, x2, y1, y2) {
   // square and horizontal display areas 
   
   var increment = 6; 
-  stroke(0, 0, 255); 
+  // changing color to purple
+  stroke(180, 100, 255); 
   var w = x2 - x1; 
   var p = dist(0, 0, w, w); 
  
