@@ -33,6 +33,11 @@ function setup() {
   // chnaged background color
   // the color barely changed so im gonna try to make it more pigmented 
   background(200, 220, 255); 
+  stroke(0); 
+  strokeWeight(5);
+  noFill();
+  rect(0, 0, width, height);
+
 
  
      
