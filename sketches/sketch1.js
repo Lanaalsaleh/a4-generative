@@ -54,7 +54,8 @@ function Pixel(x, y, speed, curve) {
 
   this.update = function() {
     // added mouse interaction here by making the mouse change movement speed
-    this.y += this.speed + mouseX * 0.001;
+    // changed speed just so it can be more noticeable 
+    this.y += this.speed + mouseX * 0.005;
     if (this.y > height) {
       this.y = 0;
     }
