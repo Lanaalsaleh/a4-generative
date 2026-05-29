@@ -72,9 +72,10 @@ function Pixel(x, y, speed, curve) {
     // now i made the points different colors some pink and some blue
     // chnaged the pink to more of a vibrant pink to become more visable 
     if (this.x < width / 2) { 
+      // felt like a neon blue would stand out more
       fill(255, 20, 147); 
     } else {
-      fill(100,200,255);
+      fill(0, 255, 255);
     }
 
     noStroke();
