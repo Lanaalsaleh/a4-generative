@@ -82,7 +82,7 @@ function horizonal(x1, x2, y1, y2) {
   } 
 } 
 function vertical(x1, x2, y1, y2) {
-  stroke(255, 105, 180);
+  stroke(255, 105, 180, 70);
   var increment = 3;
 
   for (i = x1; i <= x2; i += increment) {
