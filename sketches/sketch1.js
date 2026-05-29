@@ -42,7 +42,8 @@ function setup() {
 function draw() {
   // creating motion trails behind the moving circles
   // im gonna try making it shorter just because it blends so much and i dont like it 
-  background(0, 50);
+  // wanted this version to look way diff than the final version the remix
+  background(0, 25);
   for (var i = height / 10; i < pix.length; i++) {
     pix[i].update();
     pix[i].display();
